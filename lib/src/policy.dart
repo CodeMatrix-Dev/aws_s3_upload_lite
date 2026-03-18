@@ -88,7 +88,7 @@ class Policy {
         {"bucket": "${this.bucket}"},
         ["starts-with", "\$key", "${this.key}"],
         ["starts-with", "\$Content-Type", ""],
-        {"acl": "${aclToString(acl)}"},
+        // {"acl": "${aclToString(acl)}"},
         ["content-length-range", 1, this.maxFileSize],
         {"x-amz-credential": "${this.credential}"},
         {"x-amz-algorithm": "AWS4-HMAC-SHA256"},
