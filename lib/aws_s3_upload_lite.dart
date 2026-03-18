@@ -203,7 +203,7 @@ class AwsS3 {
 
       req.files.add(multipartFile);
       req.fields['key'] = policy.key;
-      req.fields['acl'] = aclToString(acl);
+      // req.fields['acl'] = aclToString(acl);
       req.fields['X-Amz-Credential'] = policy.credential;
       req.fields['X-Amz-Algorithm'] = 'AWS4-HMAC-SHA256';
       req.fields['X-Amz-Date'] = policy.datetime;
